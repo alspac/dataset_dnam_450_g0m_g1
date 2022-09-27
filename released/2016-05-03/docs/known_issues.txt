@@ -1,0 +1,8 @@
+2016-02-08:
+  Author: "Josine Min josine.min@bristol.ac.uk"
+  Issues:
+    - Confounding between Slide and sample type in cord blood samples.
+    - Large sample type effects (bloodspots vs white cells) in cord blood.
+    - Issues with age for mums TF1-3. For some mums it is unknown whether they are sampled at TF1, 2 or 3. 
+    - Slide effects are still there even after regressing out Slide before normalisation. 
+    - Variance components modelling shows that a lot of residual variance is still present after normalisation and regressing out age, gender, cellcounts, sampletype, aln, aln_qlet, aln_qlet_timepoint and slide.

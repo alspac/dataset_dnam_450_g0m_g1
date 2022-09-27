@@ -1,0 +1,21 @@
+Author: Josine Min
+Description: |
+  This dataset contains 4854 individuals (cord, F7, 15up, antenatal and FOM) normalised together using functional normalization.
+
+Sample description: |
+  In total there are 5469 samples for five timepoints (cord=1127; F7=1086; 15up=1073; antenatal=1100; FOM=1083) measured belonging to the 1022 mother-child pairs. The 15up samples are a mixture of 277 samples of kids at TF3 clinic at 15 yrs and 796 TF4 clinic at age 17 yrs. FOM consists of FOM (mothers at FOM clinic) and TF1-3 (mothers at child clinics TF1 to 3). There are 369 technical replicates (361 duplicates + 8 triplicates). Most of these samples are poor quality samples (low detection score) and were therefore repeated in the lab. 4904/5469 ARIES samples have been successfully genotyped. 112/5469 samples failed genotype QC due to sample swaps, gender mismatches, high IBD or relatedness issues between mums and kids and were removed from ARIES. We found 411 genotype mismatches (with a concordance below 80%) between the 65 snp probes on the 450k array and the genotype arrays with a concordance below 80% and these samples are removed. Furthermore, samples were removed if: i) mum samples had more than 90% concordance with a kids sample (22 samples) ii) concordance was below 80% between duplicates and less than 80% concordance with at least one other mums of kids sample (N=200). iii) mums samples of which concordance was below 80% between duplicates (N=10) iv) samples with low concordance (below 80%) with other timepoints (N=10). v) mums samples with low concordance (below 80%) with other timepoints (N=24). Methylation quality was checked by: sexcheck (N=191), the median intensity methylated vs unmethylated signal for all control probes (N=63), dyebias (N=14), detection pvalue (N=166), low bead numbers (N=2) and post normalization checks (N=13). The data was normalized using functional normalization (Fortin et al.). As we found that slide effects were large even after normalization, we regressed out slide on the raw betas before normalization and on the controlmatrix. After normalization 13 additional samples were removed during PCA analysis. After cleanup, we have 4854 samples including 71 replicates (9-25 samples for each timepoint) and 191 samples which are population stratification outliers in the genotype data. The userguide shows how to remove these samples. 
+
+ 
+
+  | Timecode  | TimePoint | Gender | Mean Age | Blood Spots | pbl | white cells | whole blood |
+  |-----------|-----------|--------|----------|-------------|-----|-------------|-------------|
+  | cord      | cord      | M+F    | 0        | 168         | 0   | 746         | 0           |
+  | F7        | F7        | M+F    | 7.5      | 0           | 0   | 64          | 916         |
+  | F17       | 15up      | M+F    | 15.4     | 0           | 0   | 254         | 0           |
+  | TF3       | 15up      | M+F    | 17.7     | 0           | 0   | 727         | 0           |
+  | antenatal | antenatal | F      | 28.7     | 0           | 0   | 436         | 551         |
+  | TF1-3     | FOM       | F      | 43       | 0           | 177 | 0           | 0           |
+  | FOM       | FOM       | F      | 47.8     | 0           | 0   | 810         | 0           |
+
+  For full details download the [QC document](../../blob/master/resources/QC_ARIES_alltimepoints140915.pdf)
+

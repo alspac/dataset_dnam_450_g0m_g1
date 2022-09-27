@@ -1,0 +1,22 @@
+DATASET: ALSPAC_ARIES_Methylation
+
+KEYWORDS
+	methylation
+	illumina 450k
+
+TITLE
+	?
+
+DESCRIPTION 
+	
+
+AUTHORS
+	Dr. Tom Gaunt
+	Dr. ?
+
+FORMAT
+	Raw Betas CSV
+	Methylated CSV
+	Unmethylated CSV
+	P-values CSV
+	

@@ -1,0 +1,35 @@
+"`samplesheet`": |
+  `data.Robj`: manifest file with columns extracted directly from LIMS and age, sex, aln, timepoint, timecode, sampletype, genotypeQC columns to remove population stratification samples, duplicate.rm column to remove duplicates. Samples in rows, variables in columns.
+
+"`betas`": | 
+  `data.Robj`: normalized betas using functional normalization. We used 10 PCs on the controlmatrix to regress out technical variation. Slide was regressed out as random effect before normaliziation. Data is stored as a RData object. CpGs are in rows and samples in columns.
+
+"`control_matrix`": |
+  `data.txt`: The 850 control probes are summarized in 42 control types. These probes can roughly be divided into negative control probes (613), probes intended for between array normalization (186) and the remainder (49), which are designed for quality control, including assessing the bisulfite conversion rate. None of these probes are designed to measure a biological signal.  The summarized control probes can be used as surrogates for unwanted variation and are used for the functional normalization. In this text file, sampels are rows and 42 control types are in columns.
+
+"`detection_p_values`": |
+  `data.Robj`:  This matrix shows the detection pvalues for each sample and each CpG and is extracted from the idat files using the "meffil.load.detection.pvalues" function in meffil. Data is stored as a RData object. CpGs are in rows and samples in columns.
+
+"`qc.objects_clean`": |
+  `data.Robj`: All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called norm.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the norm.objects. Specifically, the norm.objects contain raw control probe intensities, quantile distributions of the raw intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex,  predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals.
+
+"`qc.objects_all`": |
+  `data.Robj`: This objects contain all 5469 samples extracted from LIMS and is not cleaned up. This object has been used to do the data cleaning. All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called qc.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the qc or norm.objects. Specifically, the qc.objects contain raw control probe intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex,  predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals.
+
+"`derived/cellcounts/houseman/data.txt`": |
+  Cell counts extracted using Houseman algorithm implemented in meffil (PMID: 22568884). In this text file, samples are in rows and cell types in columns.
+
+"`derived/cellcounts/cord/gervinandlyle`": |
+  Cellcounts in cord predicted using GervinandLyle cord reference (unpublised). This reference has been implemented in meffil. In this text file, samples are in rows and cell types in columns.
+
+"`derived/cellcounts/cord/gse68456`": |
+  Cellcounts in cord predicted using cord reference published in de Goede et al (PMID: 26366232). This reference has been implemented in meffil. In this text file, samples are in rows and cell types in columns.
+
+"`derived/cellcounts/cord/andrews-and-bakulski`": |
+  Cellcounts in cord predicted using cord reference published in Bakulski et al 2016 (PMID: 27019159). This reference has been implemented in meffil. In this text file, samples are in rows and cell types in columns.
+
+"`derived/reports/qc`": |
+  Using meffil on `qc.objects_all` we have generated a qc.report: `ARIESall_qc-report.html`. Based on the plots here we have cleaned the data. 
+
+"`derived/reports/normalization`": |
+  Includes `normalization-report.pc*160915.html`. Using meffil on `betas` and normalisation objects generates these reports. It shows PCA plots on control probes and normalized betas. In addition it shows associations between PCs and batch variables.

@@ -1,0 +1,68 @@
+DATASET: ALSPAC_ARIES_Methylation
+
+20-May-2015
+  Data set generated
+
+
+11-October-2015 (Nabila Kazmi)
+Copied “/projects/MRC-IEU/aries/” to “/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/original_csv/”
+
+
+19-October-2015 (Nabila Kazmi)
+Renamed the manifest file and data files of different time points available at "/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/release_candidate/data/" :
+
+ARIES.manifest.releasev2_apr2014.txt data.manifest.txt -> data.manifest.txt 
+
+Data files of each time point e.g.:
+
+pValues_15up.relaeasev2.csv -> data.pvalues.csv
+
+Methylated_Intensities_15up.relaeasev2.csv -> data.methylated_intensities.csv
+
+Unmethylated_Intensities_15up.relaeasev2.csv -> data.Unmethylated_intensities.csv
+
+RawBetas_15up.relaeasev2.csv  -> data.rawbetas.csv
+
+tostBetas_15up.relaeasev2.csv -> data.tostBetas.csv
+
+
+20 October 2015 (Nabila Kazmi)
+Renamed data files of each time points available at "/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/original_csv/csv/" :
+
+Example:
+pValues_15up.relaeasev2.csv -> data.pvalues.csv
+
+Methylated_Intensities_15up.relaeasev2.csv -> data.methylated_intensities.csv
+
+Unmethylated_Intensities_15up.relaeasev2.csv -> data.Unmethylated_intensities.csv
+
+RawBetas_15up.relaeasev2.csv  -> data.rawbetas.csv
+
+tostBetas_15up.relaeasev2.csv -> data.tostBetas.csv
+
+22 October 2015 (Nabila Kazmi)
+Modified and renamed manifest file “ARIES.manifest.releasev2_apr2014.txt”  as “data.manifest.txt”per Sue and Chris Raistrick suggestions and uploaded the recent version at “/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/release_candidate/data/”
+and 
+/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/original_csv/
+
+22 October 2015 (Nabila Kazmi)
+Formatted data files to have “CpG” as first column in header, removed quotes and appended all mothers samples will be the current ID appended to an “M”.
+
+22 October 2015
+Copied aries data files from “/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/original_csv/csv/” to “/projects/MRC-IEU/studies/originals/alspac/epigenetic/methylation/450k/aries/dev/release_candidate/data/”
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

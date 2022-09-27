@@ -1,0 +1,45 @@
+Remove duplicate and population stratification samples: |
+
+  ```r
+  # load manifest file
+  load("./samplesheet/data.Robj")
+  dim(samplesheet) #4854
+
+  table(samplesheet$duplicate.rm)
+
+  #Remove 
+  #    71
+
+  table(samplesheet$genotypeQCmums)
+  #        /highhet        /IBD10per            /Miss           /strat 
+  #               2              159                4               59 
+  #NotInMothersGWAS                Y 
+  #             113             1642 
+
+  table(samplesheet$genotypeQCkids)
+
+  #CR     ETHNICITY HZT;ETHNICITY     IMISS;HZT NotInKidsGWAS 
+  #          325            76            56             6            34 
+  #            Y 
+  #         2378
+
+  sample.rm <- which(samplesheet$duplicate.rm=="Remove"|samplesheet$genotypeQCkids=="ETHNICITY"|samplesheet$genotypeQCkids=="HZT;ETHNICITY"|samplesheet$genotypeQCmums=="/strat")
+
+  # 261 samples are removed
+  length(sample.rm)
+  # 261
+
+  samplesheet_filtered <- samplesheet[-sample.rm,]
+  dim(samplesheet_filtered) # 4593
+
+  #remove these samples from beta matrix
+  pc=10
+  load("./betas/data.Robj")
+  m <- match(samplesheet$Sample_Name,colnames(norm.beta.random))
+  norm.beta.random <- norm.beta.random[,m]
+  dim(norm.beta.random) #4593
+  ```
+
+More details: |
+  See [./docs/misc/user_guide_ARIESreleasev3.pdf](../../blob/master/resources/user_guide_ARIESreleasev3.pdf) for more extensive documentation.
+

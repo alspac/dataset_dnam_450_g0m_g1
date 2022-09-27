@@ -1,0 +1,13 @@
+DATASET: ALSPAC_ARIES_Methylation
+
+Raw Betas
+	?
+
+Methylated
+	?
+
+Unmethylated
+	?
+
+P-values
+	?

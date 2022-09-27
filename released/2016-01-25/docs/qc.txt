@@ -1,0 +1,49 @@
+DATASET: ALSPAC_ARIES_Methylation
+
+17-December-2015
+	
+	DESCRIPTION
+		A subset of 1018 mother and their offspring pairs from ALSPAC dataset is in the ARIES. Their selection criteria was availability of DNA samples for 2 time points of mothers antenatal and follow-up when the offspring mean age was 17.1 years and 3 time points for the offspring neonatal, childhood (mean age 7.5) and adolescence mean age 17.1 years.
+
+	Laboratory
+		ALSPAC laboratory, Oakfield House, University of Bristol
+	
+	Laboratory acquisition of DNA methylation data
+		Bisulfite Conversion
+			Zymo EZ DNA MethylationTM kit (Zymo, Irvine, CA)
+		Measurement of genome-wide methylation
+			Illumina HumanMethylation450 BeadChip
+		Beta value
+			For each sample the proportion of DNA molecules methylated at each CpG site
+
+	QC of data
+		LIMS
+			Batch variables
+				Sample batch, BeadArray, reagent batches, sample plates, lab equipment, personnel, date/time of each step 
+			QC metrics from the standard control probes on the 450k BeadChip
+		Samples failing quality control
+			Samples with >20% probes with p-value >= 0.01
+		Additional QC step
+			Compared genotype probes on the HM450k between samples from the same individual and against SNP-chip data to identify and remove any sample mismatches
+			Flagged where there is a sex-mismatch (based on X-chr methylation)
+
+	Filters
+		List of non-specific probes, snp-confounded probes etc from "Chen YA, et al. Discovery of cross-reactive probes and polymorphic CpGs in the Illumina Infinium HumanMethylation450 microarray. Epigenetics. 2013 Jan 11;8(2)"
+		List of CpG probes which provided accurate or noisy signals from "Naeem H, et al. Reducing the risk of false discovery enabling identification of biologically significant genome-wide methylation status using the HumanMethylation450 array. BMC Genomics. 2014 Jan 22;15(1):51."
+
+	Batch effects
+		BCD plate (bisulphite conversion batch) is the major batch variable
+
+	Numbers in each time point pre and post QC
+		Pre-QC 
+			?
+		Post-QC
+			cord: 914, F7: 973,15up: 974,antenatal: 951 and FOM: 970
+			
+	Normalisation of data
+		Normalised in R with the wateRmelon package ["Schalkwyk LC, et al. Illumina 450 methylation array normalization and metrics. 2013"]  using the "Tost" algorithm to reduce the non-biological differences between probes 
+
+	Tissue composition
+		Houseman estimateCellCounts function of minfi. Takes blood and return the relative proportions of CD4+ and CD8+ T-cells, natural killer cells, monocytes, granulocytes, and b-cells in each sample.
+
+	

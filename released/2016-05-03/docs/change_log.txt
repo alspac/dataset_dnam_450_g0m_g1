@@ -1,0 +1,8 @@
+2015-02-08:
+  Author: Josine Min
+  Changes:
+    - sample and probe qc using meffil (see qc.txt)
+    - functional normalization
+    - cord blood references
+
+  
