@@ -1,0 +1,20 @@
+Dataset: dnam_450_g0m_g1
+
+Keywords:
+  - ALSPAC
+  - ARIES
+  - DNA methylation
+  - epigenetics
+
+Title: DNA methylation - 450k - G0 mothers + G1
+
+Description: |
+  This dataset was generated as part of the Accessible Resource for Integrated Epigenomics Studies. It includes Illumina 450k array assays on G1 mothers at two timepoints (pregnancy and middle age), and G0 participants at three timepoints (birth, childhood and adolescence).
+
+'Documentation Authors':
+  - "Josine Min: josine.min@bristol.ac.uk"
+  - "Matthew Suderman: matt.suderman@bristol.ac.uk"
+  - "Sam Neaves: s.neaves@bristol.ac.uk"
+
+PIs:
+  - "Nic Timpson: n.j.timpson@bristol.ac.uk"
