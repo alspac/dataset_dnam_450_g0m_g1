@@ -1,0 +1,57 @@
+
+path('../../released/2016-05-03/data/').
+
+out_path('../out/data/').
+
+temp_path('../temp/').
+
+woc_file('../../../freeze_data/freeze2/withdrawals/20221103/ForHPC/hpc_omics_withdrawals/all_individuals_to_exclude.txt').
+
+data_id_maps_path('../../../data_id_maps/internal/').
+
+
+files_required(Files):-
+	Files =
+	[
+	 '../out/data/betas/data.Robj',
+	 '../out/data/control_matrix/data.txt',
+	 '../out/data/derived/cellcouns/cord/andrews-and-bakulski/data.txt',
+	 '../out/data/derived/cellcounts/cord/gervinandlyle/data.txt',
+	 '../out/data/derived/cellcounts/cord/gse68456/data.txt',
+	 '../out/data/derived/cellcounts/houseman/data.txt',
+	 '../out/data/detection_p_values/data.Robj',
+	 '../out/data/qc.objects_all/data.Robj',
+	 '../out/data/qc.objects_clean/data.Robj',
+	 '../out/data/samplesheet/data.Robj'
+	].
+
+%%%Perl splits last char (qlet) and makes csv
+'$(TP)woc.csv',{woc_file(WF)} <--[WF],"perl -pe 's/.$/,$&/' $(WF)> $(TP)woc.csv".
+
+%%% sed adds a header line
+'$(TP)woc_with_header.csv' <--['$(TP)woc.csv'],'sed -e \'1iALN,Qlet\' $(TP)woc.csv > $(TP)woc_with_header.csv'.
+
+make_dnam_450_g0m_g1,
+{
+ path(P),
+ temp_path(TP),
+ data_id_maps_path(DP),
+ out_path(OP)
+} <--
+[
+ './rename-aries-function.r',
+ './compare-releases-function.r',
+ '$(P)betas/data.Robj',
+ '$(P)control_matrix/data.txt',
+ '$(P)derived/cellcounts/cord/andrews-and-bakulski/data.txt',
+ '$(P)derived/cellcounts/cord/gervinandlyle/data.txt',
+ '$(P)derived/cellcounts/cord/gse68456/data.txt',
+ '$(P)derived/cellcounts/houseman/data.txt',
+ '$(P)detection_p_values/data.Robj',
+ '$(P)qc.objects_all/data.Robj',
+ '$(P)qc.objects_clean/data.Robj',
+ '$(P)samplesheet/data.Robj',
+ '$(TP)woc_with_header.csv',
+ '$(DP)aln_datasetids.csv']
+
+,'Rscript data_id_rename-aries.r $(P) $(OP) $(DP)aln_datasetids.csv $(TP)woc_with_header.csv'.
