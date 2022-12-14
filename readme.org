@@ -1,0 +1,14 @@
+#+TITLE: DNA methylation - 450k - G0 mothers + G1
+
+Gene expression data from Illumina Human HT-12 v3 bead array for G1
+individuals. 
+
+This repository is for managing the named ALSPAC omics dataset with
+code name dnam_450_g0m_g1.
+
+- Documentation on the whole dataset: [[][dnam_450_g0m_g1]
+- Documentation on the current version:[[][dnam_450_g0m_g1_]
+- Documentation on the current freeze (Data availble to external collaborators):[[][]
+
+
+For access to the data please go to http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
