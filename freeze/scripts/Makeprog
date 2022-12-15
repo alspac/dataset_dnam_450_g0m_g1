@@ -36,7 +36,8 @@ make_dnam_450_g0m_g1,
  path(P),
  temp_path(TP),
  data_id_maps_path(DP),
- out_path(OP)
+ out_path(OP),
+ QsubArgs = '--mem=100G'
 } <--
 [
  './rename-aries-function.r',
