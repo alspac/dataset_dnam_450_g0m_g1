@@ -40,6 +40,7 @@ make_dnam_450_g0m_g1,
  QsubArgs = '--mem=100G'
 } <--
 [
+ './data_id_rename-aries.r',
  './rename-aries-function.r',
  './compare-releases-function.r',
  '$(P)betas/data.Robj',
