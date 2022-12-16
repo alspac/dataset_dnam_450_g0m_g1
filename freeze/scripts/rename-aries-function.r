@@ -97,7 +97,7 @@ rename.aries <- function(mapping, data.dir, output.dir) {
     samplesheet$ALN <- mapping$new[match(samplesheet$ALN, mapping$aln)]
 
     samplesheet <- samplesheet[,c("Sample_Name",
-                                  "dnam_450_g0m_g1", ##ALN
+                                  "ALN", ##ALN
                                   "QLET",
                                   "Slide",
                                   "sentrix_row",
@@ -112,6 +112,25 @@ rename.aries <- function(mapping, data.dir, output.dir) {
                                   "duplicate.rm",
                                   "genotypeQCkids",
                                   "genotypeQCmums")]
+
+    colnames(samplesheet) <-
+                               c("Sample_Name",
+                                  "dnam_450_g0m_g1", ##ALN
+                                  "QLET",
+                                  "Slide",
+                                  "sentrix_row",
+                                  "sentrix_col",
+                                  "time_code",
+                                  "time_point",
+                                  "Sex",
+                                  "BCD_plate",
+                                  "sample_type",
+                                  "additive",
+                                  "age",
+                                  "duplicate.rm",
+                                  "genotypeQCkids",
+                                  "genotypeQCmums")
+
     save(samplesheet, file=my.file.path(output.dir, filename))
 
     cat(date(), "saving cell counts files\n")
