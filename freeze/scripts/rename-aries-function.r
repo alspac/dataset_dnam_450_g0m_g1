@@ -97,7 +97,7 @@ rename.aries <- function(mapping, data.dir, output.dir) {
     samplesheet$ALN <- mapping$new[match(samplesheet$ALN, mapping$aln)]
 
     samplesheet <- samplesheet[,c("Sample_Name",
-                                  "dnam_450_g0m_g1",
+                                  "dnam_450_g0m_g1", ##ALN
                                   "QLET",
                                   "Slide",
                                   "sentrix_row",
