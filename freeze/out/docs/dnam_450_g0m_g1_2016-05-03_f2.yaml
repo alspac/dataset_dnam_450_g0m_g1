@@ -1,0 +1,35 @@
+# This yaml file is a description of a freeze of a released version of a named alspac dataset
+# It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
+
+id: alspacdcs:dnam_450_g0m_g1_2016-05-03_f2
+name: 
+description: >-
+  This is the second freeze of the 2016-05-03 version of
+  dnam_450_g0m_g1 dataset.
+
+freeze_size: 
+linker_file_md5sum: 33b08d90fa3e43504308f20283088a6b
+woc_file_md5sum: 2feb3852dfd14c2868072624fd7fa1ea
+all_individuals_to_exclude_md5sum: da4785a577a4d837883710f7ab45af51
+git_tag: 
+is_current_freeze: true
+freeze_number: 2
+freeze_date: 2022-12-19
+previous_freeze: alspacdcs:dnam_450_g0m_g1_2016-05-03_f1
+next_freeze:
+freeze_of_alspac_dataset_version: alspacdcs:dnam_450_g0m_g1_2016-05-03
+freeze_of_named_alspac_dataset: alspacdcs:dnam_450_g0m_g1
+has_parts:
+  - id: 
+    name: 
+    description: 
+    data_distributions:
+      - id: 
+        name: 
+        description: >-
+          
+        md5sum: 
+        filesize: 
+        filetype: 
+        number_of_participants: 
+        
