@@ -7,7 +7,7 @@
 #' @param data.dir The directory containing the dataset.
 #' @param output.dir The directory in which to place the modified dataset.
 #' @return The samplesheet data frame for the new dataset.
-#' 
+#'
 #' Upon completion, the directory denoted by 'output.dir' will
 #' contain a set of files identical to that of 'data.dir'
 #' but with all ALNs replaced with new identifiers
@@ -64,7 +64,7 @@ rename.aries <- function(mapping, data.dir, output.dir) {
         names(L) <- object_names
         L
     }
-    
+
     if (!file.exists(output.dir))
         dir.create(output.dir, recursive=T)
     output.dir <- normalizePath(output.dir)
@@ -81,13 +81,13 @@ rename.aries <- function(mapping, data.dir, output.dir) {
     stopifnot("Slide" %in% colnames(samplesheet))
     stopifnot("BCD_plate" %in% colnames(samplesheet))
     stopifnot("Sample_Name" %in% colnames(samplesheet))
-    
+
     samplesheet$ALN <- as.character(samplesheet$ALN)
     samplesheet$Slide <- as.character(samplesheet$Slide)
     samplesheet$BCD_plate <- as.character(samplesheet$BCD_plate)
     samplesheet$time_code <- as.character(samplesheet$time_code)
     samplesheet$time_point <- as.character(samplesheet$time_point)
-    
+
     cat(date(), "restrict to samples in both the dataset and the mapping\n")
     samplesheet <- samplesheet[which(samplesheet$ALN %in% mapping$aln),,drop=F]
     stopifnot(nrow(samplesheet) > 0)
@@ -95,9 +95,9 @@ rename.aries <- function(mapping, data.dir, output.dir) {
     cat(date(), "convert the samplesheet\n")
     samplesheet <- samplesheet[sample(1:nrow(samplesheet)),]
     samplesheet$ALN <- mapping$new[match(samplesheet$ALN, mapping$aln)]
-    
+
     samplesheet <- samplesheet[,c("Sample_Name",
-                                  "ALN",
+                                  "dnam_450_g0m_g1",
                                   "QLET",
                                   "Slide",
                                   "sentrix_row",
@@ -142,8 +142,8 @@ rename.aries <- function(mapping, data.dir, output.dir) {
         save(qc.objects, file=my.file.path(output.dir, filename))
         rm(qc.objects)
         gc()
-    } 
-    
+    }
+
     cat(date(), "saving betas\n")
     filename <- "betas/data.Robj"
     betas <- my.load(filename)[[1]]
