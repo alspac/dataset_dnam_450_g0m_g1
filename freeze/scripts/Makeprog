@@ -10,21 +10,6 @@ woc_file('../../../freeze_data/freeze2/withdrawals/20221103/ForHPC/hpc_omics_wit
 data_id_maps_path('../../../data_id_maps/internal/').
 
 
-files_required(Files):-
-	Files =
-	[
-	 '../out/data/betas/data.Robj',
-	 '../out/data/control_matrix/data.txt',
-	 '../out/data/derived/cellcouns/cord/andrews-and-bakulski/data.txt',
-	 '../out/data/derived/cellcounts/cord/gervinandlyle/data.txt',
-	 '../out/data/derived/cellcounts/cord/gse68456/data.txt',
-	 '../out/data/derived/cellcounts/houseman/data.txt',
-	 '../out/data/detection_p_values/data.Robj',
-	 '../out/data/qc.objects_all/data.Robj',
-	 '../out/data/qc.objects_clean/data.Robj',
-	 '../out/data/samplesheet/data.Robj'
-	].
-
 %%%Perl splits last char (qlet) and makes csv
 '$(TP)woc.csv',{woc_file(WF)} <--[WF],"perl -pe 's/.$/,$&/' $(WF)> $(TP)woc.csv".
 
