@@ -3,4 +3,4 @@ To make freeze.
 1. Delete data in out and temp dirs.
 2. Make sure woc file and id file uptodate
 3. Change woc_file fact to point to new woc file in makeprog
-3. Run: biomake -H -Q slurm --sbatch-args --partition=mrcieu make_dnam_450_g0m_g1
+3. Run: biomake -H -Q slurm --sbatch-args '--partition=mrcieu --account=smed001801' make_dnam_450_g0m_g1
