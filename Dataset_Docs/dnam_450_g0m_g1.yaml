@@ -12,6 +12,7 @@ primary_investigator_orcids:
 keywords:
   - methylation
   - cpg
+  - epigenetic
 has_current_version: alspacdcs:dnam_450_g0m_g1_2016-05-03
 versions:
   - alspacdcs:dnam_450_g0m_g1_2016-05-03
@@ -20,7 +21,7 @@ primary_email: alspac-omics@bristol.ac.uk # Who to contact with questions about 
 documentation_authors_orcids:
   - ORCID:0000-0002-2715-9930 # Matthew Suderman
   - ORCID:0000-0002-4064-3794 # Sam Neaves
-main_publication_doi: doi:
+main_publication_doi: doi:10.1093/ije/dyv072
 publications_dois:
-  - doi:
+  - doi:10.1093/ije/dyv072
 
