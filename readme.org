@@ -6,9 +6,9 @@ individuals.
 This repository is for managing the named ALSPAC omics dataset with
 code name dnam_450_g0m_g1.
 
-- Documentation on the whole dataset: [[][dnam_450_g0m_g1]
-- Documentation on the current version:[[][dnam_450_g0m_g1_]
-- Documentation on the current freeze (Data availble to external collaborators):[[][]
+- Documentation on the whole dataset: [[https://github.com/alspac/dataset_dnam_450_g0m_g1/blob/main/Dataset_Docs/dnam_450_g0m_g1.yaml][dnam_450_g0m_g1]]
+- Documentation on the current version:[[dnam_450_g0m_g1_2016-05-03][dnam_450_g0m_g1_2016-05-03]
+- Documentation on the current freeze (Data availble to external collaborators):[[https://github.com/alspac/dataset_dnam_450_g0m_g1/blob/main/freeze/out/docs/dnam_450_g0m_g1_2016-05-03_f2.yaml][dnam_450_g0m_g1_2016-05-03_f2]]
 
 
 For access to the data please go to http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/
