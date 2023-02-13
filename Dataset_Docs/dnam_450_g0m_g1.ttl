@@ -1,0 +1,34 @@
+@prefix ORCID: <http://identifiers.org/orcid/> .
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix schema: <http://schema.org/> .
+
+alspacdcs:dnam_450_g0m_g1 a dcat:Dataset ;
+    alspacdcs:documentation_authors_orcids ORCID:0000-0002-2715-9930,
+        ORCID:0000-0002-4064-3794 ;
+    alspacdcs:in_catalog alspacdcs:alspac_data_catalogue_001 ;
+    alspacdcs:keywords "cpg",
+        "epigenetic",
+        "methylation" ;
+    alspacdcs:main_publication_doi <https://doi.org/10.1093/ije/dyv072> ;
+    alspacdcs:primary_investigator_orcids ORCID:0000-0002-2715-9930 ;
+    alspacdcs:publications_dois <https://doi.org/10.1093/ije/dyv072> ;
+    alspacdcs:versions alspacdcs:dnam_450_g0m_g1_2016-01-25,
+        alspacdcs:dnam_450_g0m_g1_2016-05-03 ;
+    schema:description "DNA methylation data from Illumina 450k arrays for G0 mothers at two time points and G1 individuals at three time points" ;
+    schema:email "alspac-omics@bristol.ac.uk" ;
+    schema:name "DNA methylation - 450k - G0 mothers + G1" ;
+    dcat:hasCurrentVersion alspacdcs:dnam_450_g0m_g1_2016-05-03 ;
+    dcat:landingPage "http://www.bristol.ac.uk/alspac/researchers/our-data/biological-resources/" .
+
+ORCID:0000-0002-4064-3794 a foaf:Person .
+
+alspacdcs:dnam_450_g0m_g1_2016-01-25 a dcat:Dataset .
+
+ORCID:0000-0002-2715-9930 a foaf:Person .
+
+alspacdcs:dnam_450_g0m_g1_2016-05-03 a dcat:Dataset .
+
+<https://doi.org/10.1093/ije/dyv072> a alspacdcs:Paper .
+
