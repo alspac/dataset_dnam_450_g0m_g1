@@ -19,17 +19,230 @@ previous_freeze: alspacdcs:dnam_450_g0m_g1_2016-05-03_f1
 next_freeze:
 freeze_of_alspac_dataset_version: alspacdcs:dnam_450_g0m_g1_2016-05-03
 freeze_of_named_alspac_dataset: alspacdcs:dnam_450_g0m_g1
+
+
+has_containers:
+  - id: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+    name: data
+    description: A dir/folder containing the data files
+  - id: alspacdcs:71babe5d-8096-4b81-badd-f092a285d9da
+    name: betas
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+  - id: alspacdcs:fd31262e-5dcb-48a3-a5b0-5b295110094b
+    name: control_matrix
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+  - id: alspacdcs:0928ae7e-6d94-47ce-9890-a8350bcd46aa
+    name: derived
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+
+
+  - id: alspacdcs:e877f56c-6174-4427-a8ba-333b5632d85a
+    name: cellcounts
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:0928ae7e-6d94-47ce-9890-a8350bcd46aa
+
+
+  - id: alspacdcs:8b59a158-94d0-4244-a779-f4695ceb3d9a
+    name: cord
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:e877f56c-6174-4427-a8ba-333b5632d85a
+
+  - id: alspacdcs:3279aec3-c6c3-4d04-809e-94eadc51c0c8
+    name: andrews-and-bakulski
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:8b59a158-94d0-4244-a779-f4695ceb3d9a
+
+  - id: alspacdcs:8abae404-42a9-452a-9a26-7f6c8eed5c6b
+    name: gervinandlyle
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:8b59a158-94d0-4244-a779-f4695ceb3d9a
+
+  - id: alspacdcs:021ad3f5-6e32-42c0-91c6-f996a9b6e62b
+    name: gse68456
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:8b59a158-94d0-4244-a779-f4695ceb3d9a
+
+  - id: alspacdcs:ea167030-d783-46c5-b8d5-3cbd9431f396
+    name: houseman
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:e877f56c-6174-4427-a8ba-333b5632d85a
+
+  - id: alspacdcs:6e79ad66-78a5-4102-a071-7c259151d0af
+    name: detection_p_values
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+  - id: alspacdcs:4e32e07e-181d-46d2-b134-71ee5f6bd53e
+    name: qc.objects_all
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+  - id: alspacdcs:5a4d2e29-aa60-493e-a33c-7bcb63be8088
+    name: qc.objects_clean
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+  - id: alspacdcs:3275bc26-4695-43b8-915e-4bbc4d13018f
+    name: samplesheet
+    description: A dir/folder containing the 
+    belongs_to_container: alspacdcs:ea27b439-5647-4656-b3dd-568437a9d972
+
 has_parts:
   - id: 
-    name: 
+    name: betas
     description: 
     data_distributions:
       - id: 
-        name: 
+        name: data.Robj
         description: >-
           
-        md5sum: 
-        filesize: 
-        filetype: 
+
+
+        md5sum: 0a04524b0a29d8ccad9dd8433d9097db
+        filesize: 17G
+        filetype: .Robj
+        belongs_to_container: alspacdcs:
         number_of_participants: 
-        
+  - id: 
+    name: control matrix
+    description: 
+    data_distributions:
+      - id: 
+        name: data.txt
+        description: >-
+          
+
+
+        md5sum: 443be1ab9cad94a7587b12c3bced694b
+        filesize: 1.8M
+        filetype: .txt
+        belongs_to_container: alspacdcs:
+        number_of_participants:        
+
+  - id: 
+    name: andrews and bakulksi cord cell counts
+    description: 
+    data_distributions:
+      - id: 
+        name: data.txt
+        description: >-
+          
+
+
+        md5sum: 79b04868cc502a1a34ade01958f22790
+        filesize: 118k
+        filetype: .txt
+        belongs_to_container: alspacdcs:
+        number_of_participants:        
+
+  - id: 
+    name: geervin and lyle cord cell counts
+    description: 
+    data_distributions:
+      - id: 
+        name: data.txt
+        description: >-
+          
+
+
+        md5sum: 0d8535330ac6e12e7f3c5a5f3f30e600
+        filesize: 100k
+        filetype: .txt
+        belongs_to_container: alspacdcs:
+        number_of_participants:        
+
+  - id: 
+    name: gse68456 cord cell counts
+    description: 
+    data_distributions:
+      - id: 
+        name: data.txt
+        description: >-
+          
+
+
+        md5sum: 837e1e40bf27d8f6bd1a402f016b798e
+        filesize: 120k
+        filetype: .txt
+        belongs_to_container: alspacdcs:
+        number_of_participants:
+
+  - id: 
+    name: houseman cell counts
+    description: 
+    data_distributions:
+      - id: 
+        name: data.txt
+        description: >-
+          
+
+
+        md5sum: 
+        filesize: 569k
+        filetype: .txt
+        belongs_to_container: alspacdcs:
+        number_of_participants:              
+          
+  - id: 
+    name: detection p values
+    description: 
+    data_distributions:
+      - id: 
+        name: data.Robj
+        description: >-
+          
+
+
+        md5sum: a57bb261f3dbe5c217727fd4a4358b9b
+        filesize: 418M
+        filetype: .Robj
+        belongs_to_container: alspacdcs:
+        number_of_participants:   
+
+  - id: 
+    name: qc objects all
+    description: 
+    data_distributions:
+      - id: 
+        name: data.Robj
+        description: >-
+          
+
+
+        md5sum: cce6985e2ac115a6729e3f439f9d4acb
+        filesize: 497M
+        filetype: .Robj
+        belongs_to_container: alspacdcs:
+        number_of_participants:             
+
+  - id: 
+    name: qc objects clean
+    description: 
+    data_distributions:
+      - id: 
+        name: data.Robj
+        description: >-
+          
+
+
+        md5sum: 9d0b2c5086a3085aceedf3d099c8d33a
+        filesize: 659M
+        filetype: .Robj
+        belongs_to_container: alspacdcs:
+        number_of_participants:           
+
+  - id: 
+    name: samplesheet
+    description: 
+    data_distributions:
+      - id: 
+        name: data.Robj
+        description: >-
+          
+
+
+        md5sum: ecaf976c57741293ea3326f584fd46b9
+        filesize: 100K
+        filetype: .Robj
+        belongs_to_container: alspacdcs:
+        number_of_participants:                
