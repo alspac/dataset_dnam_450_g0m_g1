@@ -12,7 +12,7 @@ freeze_size: 18G
 linker_file_md5sum: 33b08d90fa3e43504308f20283088a6b
 woc_file_md5sum: 2feb3852dfd14c2868072624fd7fa1ea
 all_individuals_to_exclude_md5sum: da4785a577a4d837883710f7ab45af51
-git_tag: 
+git_tag: https://github.com/alspac/dataset_dnam_450_g0m_g1/releases/tag/Freeze2
 is_current_freeze: true
 freeze_number: 2
 freeze_date: 2022-12-19
