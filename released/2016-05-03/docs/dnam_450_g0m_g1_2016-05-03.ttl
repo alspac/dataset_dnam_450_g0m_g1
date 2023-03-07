@@ -1,0 +1,274 @@
+@prefix alspacdcs: <http://purl.org/alspac/alspac-data-catalogue-schema/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix nfo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo/v1.2/> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+alspacdcs:dnam_450_g0m_g1_2016-05-03.yaml a dcat:Dataset ;
+    alspacdcs:has_containers alspacdcs:18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120,
+        alspacdcs:20dcee3d-e45f-465a-9796-a1439187a774,
+        alspacdcs:2fb3a96e-f00c-40bb-9e50-c468be650fbf,
+        alspacdcs:6bb1ab17-3599-4dbd-88dc-09277791d942,
+        alspacdcs:88060609-ce32-4986-b823-08d621d07474,
+        alspacdcs:97fb54a9-8f82-46fb-a7c6-6ed0669e5b81,
+        alspacdcs:a91ba348-2796-4c4e-9cce-e3afe7ee984e,
+        alspacdcs:bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf,
+        alspacdcs:c693a7e5-cf56-48c0-afca-84ba750fe507,
+        alspacdcs:cb67161d-33fd-443c-8a8e-58e11a1bfdfc,
+        alspacdcs:d59e5cbf-2009-4619-9e6b-4d1f6817b3ce,
+        alspacdcs:d8f43b22-b920-4b56-b45a-4030949b4905,
+        alspacdcs:da06375d-fcab-4ec9-9951-1969051c9508,
+        alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020,
+        alspacdcs:e711245f-bc6e-4ee4-9a36-8a064a723c9f,
+        alspacdcs:f0bc6ebb-54c5-449b-b2e8-eb729a75f25f,
+        alspacdcs:f5b24c65-266c-476c-a5df-f167bc3d65b8,
+        alspacdcs:f699b8a8-694c-44b5-962b-4108f59fb01f ;
+    alspacdcs:has_freezes alspacdcs:dnam_450_g0m_g1_2016-05-03_f2.yaml ;
+    alspacdcs:has_next_version "NA"^^xsd:anyURI ;
+    alspacdcs:has_parts alspacdcs:01ae18d7-69b2-46c9-9fac-b517994f4545,
+        alspacdcs:106bad45-3716-488f-bdd9-c334fa37a9bf,
+        alspacdcs:12fb358d-8656-498f-8c3f-c481e5ddbc09,
+        alspacdcs:27cc2842-4ceb-45ff-abe1-af5106e102d2,
+        alspacdcs:40ce26ee-b571-4925-ae5f-ed574b7fc0c6,
+        alspacdcs:657b5ede-5c02-4feb-9620-868961472e9b,
+        alspacdcs:722a0c01-47cc-418b-8b16-1ca23e26fe79,
+        alspacdcs:c0e014ab-76c2-49b2-b458-5e86b4936d5b,
+        alspacdcs:d9670e1b-ee23-4d66-8d38-e6a8c4289163,
+        alspacdcs:fd56cb7c-582f-44e9-b2ec-4f1de23e07fd ;
+    alspacdcs:has_previous_version "NA"^^xsd:anyURI ;
+    alspacdcs:is_current_version "True" ;
+    alspacdcs:version_of alspacdcs:dnam_450_g0m_g1 ;
+    schema:description """This is a 2016 version of the DNA methylation data for G0M and G1 Alspac participants
+""" ;
+    schema:name "DNA methylation - 450k - G0 mothers + G1 release version 2016-05-03" .
+
+alspacdcs:01ae18d7-69b2-46c9-9fac-b517994f4545 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:77d97ff8-5d79-4430-a387-bcbce6af81fc ;
+    schema:description "Cellcounts in cord predicted using cord reference published in de Goede et al (PMID: 26366232). This reference has been implemented in meffil. Samples are in rows and cell types in columns." ;
+    schema:name "gse68456 cord cell counts" .
+
+alspacdcs:106bad45-3716-488f-bdd9-c334fa37a9bf a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:5c5a3807-1e0e-4910-bc93-afc3436950ca ;
+    schema:description "Manifest file with columns extracted directly from LIMS and age, sex, aln, timepoint, timecode, sampletype, genotypeQC columns to remove population stratification samples, duplicate.rm column to remove duplicates. Samples in rows, variables in columns." ;
+    schema:name "samplesheet" .
+
+alspacdcs:12fb358d-8656-498f-8c3f-c481e5ddbc09 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:c11027d5-a263-4b11-a34f-73217df52fdd ;
+    schema:description "Cellcounts in cord predicted using cord reference published in Bakulski et al 2016 (PMID: 27019159). This reference has been implemented in meffil. In this text file, samples are in rows and cell types in columns." ;
+    schema:name "andrews and bakulksi cord cell counts" .
+
+alspacdcs:19f635a0-f0b0-45a0-bad3-4ea9ba72c83a a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:20dcee3d-e45f-465a-9796-a1439187a774 ;
+    alspacdcs:md5sum "d1ebacfab5d05d6e9fe78df5d812d8e6" ;
+    schema:description "Plain text file of cell counts predicted using GervinandLyle cord reference." ;
+    schema:name "data.txt" ;
+    dcat:byteSize "100k" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:24076ea9-591f-4769-8e5c-5851cb1ccbc6 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:c693a7e5-cf56-48c0-afca-84ba750fe507 ;
+    alspacdcs:md5sum "f287be1fe41ae3654369dd04a90f8372" ;
+    schema:description "R object file  of qc objects clean." ;
+    schema:name "data.Robj" ;
+    dcat:byteSize "957M" ;
+    dcat:mediaType ".Robj" .
+
+alspacdcs:241b6448-1538-4dc5-ba8c-3df68e306887 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:f699b8a8-694c-44b5-962b-4108f59fb01f ;
+    alspacdcs:md5sum "ef19a69f601173e78c581c04229478f8" ;
+    schema:description "Plain text file of the control matrix." ;
+    schema:name "data.txt" ;
+    dcat:byteSize "1.8M" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:27cc2842-4ceb-45ff-abe1-af5106e102d2 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:c328b300-c945-4591-b280-6a68ebc51c0f ;
+    schema:description "This objects contain samples extracted from LIMS and is not cleaned up. This object has been used to do the data cleaning. All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called qc.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the qc or norm.objects. Specifically, the qc.objects contain raw control probe intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex,  predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals." ;
+    schema:name "qc objects all" .
+
+alspacdcs:40ce26ee-b571-4925-ae5f-ed574b7fc0c6 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:241b6448-1538-4dc5-ba8c-3df68e306887 ;
+    schema:description """The 850 control probes are summarized in 42 control types. These probes can roughly be divided into negative control probes
+  (613), probes intended for between array normalization (186)
+  and the remainder (49), which are designed for quality
+  control, including assessing the
+  bisulfite conversion rate. None of these probes are designed
+  to measure a biological signal.
+  The summarized control probes can be used as surrogates for
+  unwanted variation and are used for the functional
+  normalization.
+  Samples are rows and 42 control types are in columns.""" ;
+    schema:name "control matrix" .
+
+alspacdcs:5c5a3807-1e0e-4910-bc93-afc3436950ca a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:6bb1ab17-3599-4dbd-88dc-09277791d942 ;
+    alspacdcs:md5sum "f64e33c08411256369886966182069a0" ;
+    schema:description "R data object manifest file." ;
+    schema:name "data.Robj" ;
+    dcat:byteSize "127K" ;
+    dcat:mediaType ".Robj" .
+
+alspacdcs:657b5ede-5c02-4feb-9620-868961472e9b a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:95cc8a1f-8087-4c5c-827c-e61c076282b5 ;
+    schema:description "This matrix shows the detection pvalues for each sample and each CpG and is extracted from the idat files using the \"meffil.load.detection.pvalues\" function in meffil. CpGs are in rows and samples in columns." ;
+    schema:name "detection p values" .
+
+alspacdcs:722a0c01-47cc-418b-8b16-1ca23e26fe79 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:deb00b0b-36e2-4eae-b10d-5ce1526a55ef ;
+    schema:description """Normalized betas using functional normalization. We used 10 PCs on the controlmatrix to regress out technical variation. Slide was regressed out as random effect before normaliziation.
+ CpGs are in rows and samples in columns.""" ;
+    schema:name "betas" .
+
+alspacdcs:77d97ff8-5d79-4430-a387-bcbce6af81fc a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:88060609-ce32-4986-b823-08d621d07474 ;
+    alspacdcs:md5sum "44c6e544116bc646dd7e939977798052" ;
+    schema:description "Plain text file containinng cell counts predicted using cord reference." ;
+    schema:name "data.txt" ;
+    dcat:byteSize "120k" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:95cc8a1f-8087-4c5c-827c-e61c076282b5 a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:da06375d-fcab-4ec9-9951-1969051c9508 ;
+    alspacdcs:md5sum "547217d77280df0633e9b4953d02f811" ;
+    schema:description "R object file for the detection p values matrix" ;
+    schema:name "data.Robj" ;
+    dcat:byteSize "418M" ;
+    dcat:mediaType ".Robj" .
+
+alspacdcs:97fb54a9-8f82-46fb-a7c6-6ed0669e5b81 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:d8f43b22-b920-4b56-b45a-4030949b4905 ;
+    schema:description "A dir/folder containing the qc reports" ;
+    schema:name "qc" .
+
+alspacdcs:b656f997-7505-4dc7-822a-c0a99522403e a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf ;
+    alspacdcs:md5sum "b8ff828b793a330a3638a883aec6ce13" ;
+    schema:description "Text file of the cell counts calculated using Houseman algorithm." ;
+    schema:name "data.txt" ;
+    dcat:byteSize "571K" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:c0e014ab-76c2-49b2-b458-5e86b4936d5b a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:b656f997-7505-4dc7-822a-c0a99522403e ;
+    schema:description "Cell counts extracted using Houseman algorithm implemented in meffil (PMID: 22568884). Samples are in rows and cell types in columns." ;
+    schema:name "houseman cell counts" .
+
+alspacdcs:c11027d5-a263-4b11-a34f-73217df52fdd a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:a91ba348-2796-4c4e-9cce-e3afe7ee984e ;
+    alspacdcs:md5sum "36cb564ccd08d1be6d24055dcadb99e9" ;
+    schema:description "Plain text file of cellcounts in cord predicted using Bakulski." ;
+    schema:name "data.txt" ;
+    dcat:byteSize "118k" ;
+    dcat:mediaType ".txt" .
+
+alspacdcs:c328b300-c945-4591-b280-6a68ebc51c0f a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:cb67161d-33fd-443c-8a8e-58e11a1bfdfc ;
+    alspacdcs:md5sum "4227f425c5b6cd2599a365634eb98b33" ;
+    schema:description "R data file of the qc objects." ;
+    schema:name "data.Robj" ;
+    dcat:byteSize "1.2G" ;
+    dcat:mediaType ".Robj" .
+
+alspacdcs:d59e5cbf-2009-4619-9e6b-4d1f6817b3ce a nfo:Folder ;
+    schema:description "A dir/folder containing the script files" ;
+    schema:name "scripts" .
+
+alspacdcs:d9670e1b-ee23-4d66-8d38-e6a8c4289163 a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:24076ea9-591f-4769-8e5c-5851cb1ccbc6 ;
+    schema:description "All data processing has been conducted using Meffil. Meffil uses illuminaio R package to parse Illumina IDAT files into a meffil object called norm.objects. All meffil functions, QC summary, functional normalization and post-normalization QC summary operate on the norm.objects. Specifically, the norm.objects contain raw control probe intensities, quantile distributions of the raw intensities, poor quality probes based on detection Pvalues and number of beads, predicted sex, predicted cellcounts and a samplesheet with batch variables. In addition, copy number variation can be extracted. This object is a list of individuals." ;
+    schema:name "qc objects clean" .
+
+alspacdcs:deb00b0b-36e2-4eae-b10d-5ce1526a55ef a dcat:Distribution ;
+    alspacdcs:belongs_to_container alspacdcs:f0bc6ebb-54c5-449b-b2e8-eb729a75f25f ;
+    alspacdcs:md5sum "d1978f5ee0ca105cd178fb3129d402fa" ;
+    schema:description "R data object for the Normalized beta data." ;
+    schema:name "data.Robj" ;
+    dcat:byteSize "17G" ;
+    dcat:mediaType ".Robj" .
+
+alspacdcs:dnam_450_g0m_g1_2016-05-03_f2.yaml a dcat:Dataset .
+
+alspacdcs:f5b24c65-266c-476c-a5df-f167bc3d65b8 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:d8f43b22-b920-4b56-b45a-4030949b4905 ;
+    schema:description "A dir/folder containing the normalization reports" ;
+    schema:name "normalization" .
+
+alspacdcs:fd56cb7c-582f-44e9-b2ec-4f1de23e07fd a dcat:Dataset ;
+    alspacdcs:data_distributions alspacdcs:19f635a0-f0b0-45a0-bad3-4ea9ba72c83a ;
+    schema:description "Cellcounts in cord predicted using GervinandLyle cord reference (unpublised). This reference has been implemented in meffil. Samples are in rows and cell types in columns." ;
+    schema:name "geervin and lyle cord cell counts" .
+
+alspacdcs:20dcee3d-e45f-465a-9796-a1439187a774 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120 ;
+    schema:description "A dir/folder containing the cell count predictions by gervinandlyle algorithm/method." ;
+    schema:name "gervinandlyle" .
+
+alspacdcs:6bb1ab17-3599-4dbd-88dc-09277791d942 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the manifest file from Lims." ;
+    schema:name "samplesheet" .
+
+alspacdcs:88060609-ce32-4986-b823-08d621d07474 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120 ;
+    schema:description "A dir/folder containing the cell count predictions by the gse68456 method." ;
+    schema:name "gse68456" .
+
+alspacdcs:a91ba348-2796-4c4e-9cce-e3afe7ee984e a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120 ;
+    schema:description "A dir/folder containing the cell count predictions by andrews-and-bakulski algorithm" ;
+    schema:name "andrews-and-bakulski" .
+
+alspacdcs:bb8e532d-bb2a-4a7d-98d0-d8e2bd3bf1bf a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:2fb3a96e-f00c-40bb-9e50-c468be650fbf ;
+    schema:description "A dir/folder containing the cell count predictions by houseman method. " ;
+    schema:name "houseman" .
+
+alspacdcs:c693a7e5-cf56-48c0-afca-84ba750fe507 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the cleaned samples from Lims" ;
+    schema:name "qc.objects_clean" .
+
+alspacdcs:cb67161d-33fd-443c-8a8e-58e11a1bfdfc a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the samples extracted from lims and not cleaned. " ;
+    schema:name "qc.objects_all" .
+
+alspacdcs:da06375d-fcab-4ec9-9951-1969051c9508 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the matrix of detection values" ;
+    schema:name "detection_p_values" .
+
+alspacdcs:f0bc6ebb-54c5-449b-b2e8-eb729a75f25f a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the beta files" ;
+    schema:name "betas" .
+
+alspacdcs:f699b8a8-694c-44b5-962b-4108f59fb01f a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the control matrix files" ;
+    schema:name "control_matrix" .
+
+alspacdcs:2fb3a96e-f00c-40bb-9e50-c468be650fbf a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e711245f-bc6e-4ee4-9a36-8a064a723c9f ;
+    schema:description "A dir/folder containing the cell count predictions" ;
+    schema:name "cellcounts" .
+
+alspacdcs:d8f43b22-b920-4b56-b45a-4030949b4905 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e711245f-bc6e-4ee4-9a36-8a064a723c9f ;
+    schema:description "A dir/folder containing the reports" ;
+    schema:name "reports" .
+
+alspacdcs:e711245f-bc6e-4ee4-9a36-8a064a723c9f a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 ;
+    schema:description "A dir/folder containing the derived data (e.g. Cell count predictions)" ;
+    schema:name "derived" .
+
+alspacdcs:18dcd1f2-5e3b-48ee-8a5d-5d3ca225b120 a nfo:Folder ;
+    alspacdcs:belongs_to_container alspacdcs:2fb3a96e-f00c-40bb-9e50-c468be650fbf ;
+    schema:description "A dir/folder containing the cell count predictions for cord." ;
+    schema:name "cord" .
+
+alspacdcs:e6085157-e31d-412a-a36c-7126efb0d020 a nfo:Folder ;
+    schema:description "A dir/folder containing the data files" ;
+    schema:name "data" .
+
