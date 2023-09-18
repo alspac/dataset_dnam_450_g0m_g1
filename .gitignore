@@ -1,5 +1,19 @@
 data/
 
+# freeze
 freeze/temp/
+freeze/out/data/
+freeze/scripts/.biomake/
+# released
+released/
 
+# emacs leftover from Sam - confusing often
+*~
+
+# dev section, as this has test logs
+dev/dataset_checks/logs/
+dev/dataset_checks/data/
+dev/dataset_checks/logs
+
+raw/
 released/
