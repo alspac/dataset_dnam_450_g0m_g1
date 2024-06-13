@@ -5,7 +5,7 @@ out_path('../out/data/').
 
 temp_path('../temp/').
 
-woc_file('../../../freeze_data/freeze3/withdrawals/20230913/ForHPC/hpc_omics_withdrawals/all_individuals_to_exclude.txt').
+woc_file('../../../freeze_data/freeze4/withdrawals/20240611/ForHPC/hpc_omics_withdrawals/all_individuals_to_exclude.txt').
 
 data_id_maps_path('../../../data_id_maps/internal/').
 

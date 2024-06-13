@@ -17,3 +17,5 @@ dev/dataset_checks/logs
 
 raw/
 released/
+*_rsync.err
+*_rsync.log
