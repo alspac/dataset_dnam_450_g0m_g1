@@ -1,11 +1,11 @@
 # This yaml file is a description of a freeze of a released version of a named alspac dataset
 # It should conform to the schema https://github.com/alspac/alspac-data-catalogue-schema
 
-id: alspacdcs:dnam_450_g0m_g1_2016-05-03_f3
+id: alspacdcs:dnam_450_g0m_g1_2016-05-03_f4
 name: >-
-  DNA methylation - 450k - G0 mothers + G1 version 2016-05-03 Freeze 3
+  DNA methylation - 450k - G0 mothers + G1 version 2016-05-03 Freeze 4
 description: >-
-  This is the third freeze of the 2016-05-03 version of
+  This is the fourth freeze of the 2016-05-03 version of
   dnam_450_g0m_g1 dataset.
 
 freeze_size: 18G
